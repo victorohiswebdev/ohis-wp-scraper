@@ -185,10 +185,14 @@ class Exporter {
 
 		if ( $success ) {
 			// Do not delete base_dir here. Keep it protected.
-			// Return a secure download URL
-			$download_url = wp_nonce_url(
-				admin_url( 'admin-ajax.php?action=wphe_download_zip&file=' . urlencode( $zip_filename ) ),
-				'wphe_download_zip'
+			// Return a secure download URL without escaping html entities
+			$download_url = add_query_arg(
+				[
+					'action'   => 'wphe_download_zip',
+					'file'     => urlencode( $zip_filename ),
+					'_wpnonce' => wp_create_nonce( 'wphe_download_zip' )
+				],
+				admin_url( 'admin-ajax.php' )
 			);
 			return $download_url;
 		}
