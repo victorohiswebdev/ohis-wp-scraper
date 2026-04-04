@@ -1,0 +1,85 @@
+.wphe-wrap {
+	max-width: 900px;
+}
+
+.wphe-dashboard {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	margin-top: 20px;
+}
+
+.wphe-settings-panel,
+.wphe-progress-panel {
+	background: #fff;
+	border: 1px solid #ccd0d4;
+	box-shadow: 0 1px 1px rgba(0,0,0,.04);
+	padding: 20px;
+	flex: 1;
+	min-width: 300px;
+	box-sizing: border-box;
+}
+
+.wphe-options-group {
+	margin-bottom: 20px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid #f0f0f0;
+}
+
+.wphe-options-group h3 {
+	margin-top: 0;
+	font-size: 14px;
+}
+
+.wphe-progress-bar-wrap {
+	width: 100%;
+	background-color: #f0f0f1;
+	border-radius: 3px;
+	overflow: hidden;
+	height: 25px;
+	margin-top: 20px;
+	box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+}
+
+.wphe-progress-bar {
+	height: 100%;
+	width: 0%;
+	background-color: #2271b1;
+	transition: width 0.3s ease;
+}
+
+.wphe-progress-text {
+	text-align: center;
+	margin-top: 5px;
+	font-weight: bold;
+	color: #3c434a;
+}
+
+.wphe-console-wrap {
+	background: #1e1e1e;
+	color: #00ff00;
+	padding: 10px;
+	height: 200px;
+	overflow-y: auto;
+	margin-top: 20px;
+	border-radius: 3px;
+	font-family: monospace;
+}
+
+.wphe-console {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.wphe-console li {
+	margin-bottom: 5px;
+}
+
+.wphe-console li.error {
+	color: #ff4444;
+}
+
+.wphe-console li.success {
+	color: #00ff00;
+}
